@@ -13,7 +13,7 @@
 
 .cont1{
     grid-area: cont1;
-    height: 100vh;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3.5fr 4fr;
@@ -51,10 +51,11 @@ li,a{
 
 .projects{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 1.3fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 'cards announce'
                 'cards trend';
+    
 }
 .flex{
     display: flex;
@@ -67,8 +68,8 @@ li,a{
 }
 
 .box{
-    width: min(300px,22vw);
-    height: min(200px,18vh);
+    width: min(250px,23em);
+    /* height: auto; */
     border-left: 6px solid #f0b429;
     padding: 18px;
     border-radius: 13px;
@@ -81,12 +82,13 @@ li,a{
 }
 .cards h3{
     grid-area: heading;
-    grid-template-rows: 0.2fr 5fr;
 }
 .box-cont{
     grid-area: box;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    gap: 40px;
+    padding-bottom: 25px;
 }
 .cards{
     grid-area: cards;
@@ -125,7 +127,6 @@ li,a{
 }
 .cont2{
     grid-area: cont2;
-    height: 100vh;
     font-size: 0.9rem;
 }
 
@@ -141,6 +142,7 @@ li,a{
     border-radius: 12px;
     padding: 4px;
     align-items: center;
+    max-width: 500px;
 }
 .account{
     display: flex;
@@ -159,11 +161,42 @@ li,a{
     padding: 15px 20px 5px 25px;
 }
 .below{
-    padding: 15px 20px 0px 25px;
+    padding: 15px 20px 60px 25px;
     background-color:  #e2e8f0;
 }
 .mini{
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+}
+.ann-box{
+    background: white;
+    padding: 20px 30px 15px 30px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+}
+.announce{
+    margin-top: 10px;
+}
+.guideLines{
+    color: #656363;
+}
+.trends{
+    background: white;
+    padding: 10px 30px 15px 30px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+}
+
+/* designation */
+.desg{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 9px;
+    align-items: center;
+}
+.users{
+    width: 30px;
+    border-radius: 20px;
 }
