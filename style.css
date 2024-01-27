@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: 'cont1 cont2';
+}
+
+.cont1{
+    grid-area: cont1;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3.5fr 4fr;
+    justify-content: center;
+    background-color: #1992d4;
+    color: white;
+    padding: 20px;
+    font-size: 0.7rem;
+    gap:10px;
+}
+li,a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.search{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.profile{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+.announcements{
+    grid-area: announce;
+}
+.trending{
+    grid-area: trend;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'cards announce'
+                'cards trend';
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.operation ul{
+    display: flex;
+}
+
+.box{
+    width: 300px;
+    height: 200px;
+    border: 2px solid red;
+}
+.cards h3{
+    grid-area: heading;
+}
+.box-cont{
+    grid-area: box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cards{
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 'heading heading'
+                         'box box';
+}
+
+.logo{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.logo img{
+    width: 40px;
+    filter: invert();
+}
+/* color and padding */
+.nav ul, .settings ul{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    gap: 23px;
+    font-weight: bold;
+}
